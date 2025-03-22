@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSphere - Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Student Name: John Doe | ID: STU12345 -->
+    <header class="sticky-header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>TechSphere</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" onclick="showCart()"><i class="fas fa-shopping-cart"></i> <span id="cartCount">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="products-main">
+        <div class="product-filters">
+            <button class="filter-btn active" onclick="filterProducts('all')">All Products</button>
+            <button class="filter-btn" onclick="filterProducts('mobile')">Smartphones</button>
+            <button class="filter-btn" onclick="filterProducts('laptop')">Laptops</button>
+            <button class="filter-btn" onclick="filterProducts('accessories')">Accessories</button>
+        </div>
+
+        <div class="product-grid">
+            <!-- Mobile Products -->
+            <div class="product-card mobile">
+                <img src="visionpro.jpg" alt="Smartphone" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">UltraVision X1 Pro</h3>
+                    <p class="product-description">6.7" AMOLED Display, 128GB Storage, 5G Connectivity</p>
+                    <p class="product-price">$899.99</p>
+                    <div class="product-actions">
+                        <button class="detail-btn" onclick="showProductDetail('mobile1')">Details</button>
+                        <button class="cart-btn" onclick="addToCart('UltraVision X1 Pro')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Laptop Products -->
+            <div class="product-card laptop">
+                <img src="macbook-pro-retina-with-yosemite-5-on-the-screen.jpg" alt="Laptop" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">ProBook ZX550</h3>
+                    <p class="product-description">15.6" 4K Display, Intel Core i7, 16GB RAM</p>
+                    <p class="product-price">$1499.99</p>
+                    <div class="product-actions">
+                        <button class="detail-btn" onclick="showProductDetail('laptop1')">Details</button>
+                        <button class="cart-btn" onclick="addToCart('ProBook ZX550')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Products -->
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <!-- Footer content same as index.html -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
