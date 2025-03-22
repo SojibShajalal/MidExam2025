@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSphere - Premium Tech Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Student Name: John Doe | ID: STU12345 -->
+    <header class="sticky-header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>TechSphere</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" onclick="showCart()">
+                    <i class="fas fa-shopping-cart"></i> 
+                    <span id="cartCount">0</span>
+                    <!-- Shop Token Added -->
+                    <span id="shopToken" style="margin-left: 10px;"></span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <!-- Added Hero Image -->
+                <div class="hero-image">
+                    <img src="iPhone131_COLOR-GREEN_CAPACITY-ALL_533x.png" alt="Tech Products">
+                </div>
+                <div class="hero-text">
+                    <h2>Next Generation Tech Solutions</h2>
+                    <p>Experience innovation like never before</p>
+                    <button class="cta-button" onclick="exploreProducts()">Explore Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <!-- ... (existing feature cards) ... -->
+        </section>
+    </main>
+
+    <!-- ... (existing footer) ... -->
+
+    <script src="script.js"></script>
+    <script>
+        // Shop Token Counter
+        let tokenCount = 0;
+        const tokenElement = document.getElementById('shopToken');
+        
+        setInterval(() => {
+            tokenCount += 1;
+            tokenElement.textContent = `Tokens: ${tokenCount}`;
+        }, 10000);
+    </script>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About TechSphere</h4>
+                <p>Leading tech retailer since 2015</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Warranty</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 TechSphere. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
